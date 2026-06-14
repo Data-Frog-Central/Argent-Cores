@@ -1,0 +1,12 @@
+/libretro-common/
+/libretro-cores/
+*.o
+*.d
+*.a
+*.map
+*.elf
+*.hcrtos
+.env
+.local.mk
+.DS_Store
+Thumbs.db

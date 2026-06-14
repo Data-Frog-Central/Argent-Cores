@@ -1,0 +1,48 @@
+{
+  "2048": {
+    "source": "https://github.com/libretro/libretro-2048",
+    "branch": "c90437d3c3913999624deca3fb55ecfa632b72c4",
+    "directory": "libretro-cores/libretro-2048",
+    "output": "2048.hcrtos",
+    "make": {
+      "file": "Makefile.libretro",
+      "args": ""
+    },
+    "commands": {
+      "pre-make": [
+        "bash ../../patches/patch_2048.sh"
+      ],
+      "post-make": []
+    }
+  }, 
+  "frogui": {
+    "source": "https://github.com/Data-Frog-Central/FrogUI",
+    "branch": "3ee8ff02b91545fa82e2c72f7932a4d8e858779b",
+    "directory": "libretro-cores/FrogUI",
+    "output": "frogui.hcrtos",
+    "make": {
+      "file": "Makefile",
+      "args": ""
+    },
+    "commands": {
+      "pre-make": [],
+      "post-make": []
+    }
+  },
+  "gpsp": {
+    "source": "https://github.com/libretro/gpsp",
+    "branch": "2db57b11a437c4432ab69823bdcd951181de6213",
+    "directory": "libretro-cores/gpsp",
+    "output": "gpsp.hcrtos",
+    "make": {
+      "file": "Makefile",
+      "args": ""
+    },
+    "commands": {
+      "pre-make": [
+        "bash ../../patches/patch_gpsp.sh"
+      ],
+      "post-make": []
+    }
+  }
+}
