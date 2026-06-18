@@ -17,7 +17,7 @@
   }, 
   "frogui": {
     "source": "https://github.com/Data-Frog-Central/FrogUI",
-    "branch": "3ee8ff02b91545fa82e2c72f7932a4d8e858779b",
+    "branch": "2be3905aeee73b22ac3dda9c4dc8c4e1870d340f",
     "directory": "libretro-cores/FrogUI",
     "output": "frogui.hcrtos",
     "make": {
