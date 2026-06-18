@@ -11,7 +11,28 @@
 
 #include <libretro.h>
 
-typedef void (*retro_frontend_hcge_fb_fill_rect_t)(void *frame, int x, int y, unsigned width, unsigned height, unsigned full_width, unsigned full_height, uint16_t color);
+typedef struct {
+    const void *frame;
+    unsigned full_width;
+    unsigned full_height;
+    unsigned width;
+    unsigned height;
+    unsigned pitch;
+    int x;
+    int y;
+    bool rgb32;
+} FrameInfo;
+
+typedef enum {
+    ROTATE_0,
+    ROTATE_90,
+    ROTATE_180,
+    ROTATE_270
+} RotationMode;
+
+typedef void (*retro_frontend_hcge_fb_fill_rect_t)(FrameInfo fill_frame, uint32_t color);
+typedef void (*retro_frontend_hcge_accel_blit_t)(FrameInfo src_info, FrameInfo dst_info, RotationMode rotation);
+typedef void (*retro_frontend_hcge_accel_stretch_blit_t)(FrameInfo src_info, FrameInfo dst_info);
 
 struct retro_private_emulator_paths {
     const char *core_path;
@@ -20,6 +41,8 @@ struct retro_private_emulator_paths {
 
 struct retro_private_accel_functions {
     retro_frontend_hcge_fb_fill_rect_t hcge_fb_fill_rect;
+    retro_frontend_hcge_accel_blit_t hcge_accel_blit;
+    retro_frontend_hcge_accel_stretch_blit_t hcge_accel_stretch_blit;
 };
 
 //  This is meant to get the roms directory for cores like FrogUI
@@ -37,7 +60,7 @@ struct retro_private_accel_functions {
 #define RETRO_ENVIRONMENT_GET_HCGE_ACCEL_FUNCTIONS (RETRO_ENVIRONMENT_PRIVATE | 4)
 
 //  This is meant for cores like TGB Dual that support 2+ instances running
-RETRO_API unsigned retro_get_sram_number(); // Number of sram slots
+RETRO_API unsigned retro_get_sram_number(void); // Number of sram slots
 RETRO_API void *retro_get_sram_data_ext(unsigned slot); // Get sram pointer from slot number
 RETRO_API size_t retro_get_sram_size_ext(unsigned slot); // Get sram size from slot number
 
