@@ -39,7 +39,7 @@ all: core.hcrtos
 
 libretro_core:
 	@$(call echo_i,"compiling $(CORE)")
-	$(MAKE) -j$(NPROC) -C "$(CORE)" $(MAKEFILE) platform=dartos
+	$(MAKE) -j$(NPROC) -C "$(CORE)" $(MAKEFILE) platform=sf2000
 
 libretro_core.a: libretro_core
 	cp "$(CORE)"/*.a libretro_core.a
@@ -66,7 +66,7 @@ clean:
 	-rm -f libretro_core.a libretro-common.a
 	@if [ -n "$(CORE)" ]; then \
 		$(MAKE) -j$(NPROC) -C libretro-common clean; \
-		$(MAKE) -j$(NPROC) -C $(CORE) $(MAKEFILE) clean platform=dartos; \
+		$(MAKE) -j$(NPROC) -C $(CORE) $(MAKEFILE) clean platform=sf2000; \
 	fi
 
 .PHONY: all clean libretro-common

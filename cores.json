@@ -9,9 +9,10 @@
       "args": ""
     },
     "commands": {
-      "pre-make": [
+      "patch-cmds": [
         "bash ../../patches/patch_2048.sh"
       ],
+      "pre-make": [],
       "post-make": []
     }
   }, 
@@ -25,6 +26,7 @@
       "args": ""
     },
     "commands": {
+      "patch-cmds": [],
       "pre-make": [],
       "post-make": []
     }
@@ -39,9 +41,10 @@
       "args": ""
     },
     "commands": {
-      "pre-make": [
+      "patch-cmds": [
         "bash ../../patches/patch_gpsp.sh"
       ],
+      "pre-make": [],
       "post-make": []
     }
   }
