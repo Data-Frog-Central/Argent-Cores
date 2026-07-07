@@ -275,8 +275,8 @@
     }
   },
   "sameboy": {
-    "source": "https://github.com/madcock/SameBoy",
-    "branch": "066d9e9110777c3cbcc2f72a72ca64a588081400",
+    "source": "https://github.com/Data-Frog-Central/SameBoy",
+    "branch": "6f0c75b169b715233559bfd53df2ae700d0b4559",
     "directory": "libretro-cores/SameBoy/",
     "output": "SameBoy.hcrtos",
     "make": {
