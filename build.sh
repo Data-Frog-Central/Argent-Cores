@@ -48,7 +48,7 @@ for CORE in $CORES; do
     ### Extract Mandatory Keys ###
     SOURCE=$(jq -r ".\"$CORE\".source // \"\"" "$MAIN_DIR/$JSON_FILE")
     DIRECTORY=$(jq -r ".\"$CORE\".directory // \"\"" "$MAIN_DIR/$JSON_FILE")
-    MAKEFILE_DIRECTORY=$(jq -r ".\"$CORE\".makefile_directory // \"\"" "$MAIN_DIR/$JSON_FILE")
+    MAKEFILE_DIRECTORY=$(jq -r ".\"$CORE\".make.directory // \"\"" "$MAIN_DIR/$JSON_FILE")
     BRANCH=$(jq -r ".\"$CORE\".branch // \"master\"" "$MAIN_DIR/$JSON_FILE") # defaults to master
     OUTPUT=$(jq -r ".\"$CORE\".output // \"\"" "$MAIN_DIR/$JSON_FILE")
 
