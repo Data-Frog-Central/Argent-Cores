@@ -19,8 +19,8 @@ if ! command -v jq &> /dev/null; then
 fi
 
 if [ ! -d "libretro-common" ]; then
-    git clone https://github.com/Data-Frog-Central/libretro-common
-    sed -i 's|CFLAGS += -I\.\./\.\.|CFLAGS += -I../include|g' libretro-common/Makefile
+    git clone https://github.com/Data-Frog-Central/libretro-common --branch Multicore
+    sed -i 's|.*CFLAGS += -I../../include.*|CFLAGS += -I../include|g' libretro-common/Makefile
 fi
 
 if [ "$#" -gt 0 ]; then

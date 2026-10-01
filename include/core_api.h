@@ -1,11 +1,10 @@
 #ifndef __CORE_API_H
 #define __CORE_API_H
-
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 #include <dirent.h>
-
-#if !defined(TickType_t)
-typedef uint32_t TickType_t;
-#endif
+#include <stdint.h>
 
 #define MAKE_MAGIC(a, b, c, d) ((uint32_t)(a) << 24 | (uint32_t)(b) << 16 | (uint32_t)(c) << 8 | (uint32_t)(d))
 #define CORE_API_MAGIC  MAKE_MAGIC('D', 'A', 'R', 'T')
@@ -62,7 +61,7 @@ struct frontend_functions_t {
    int (*kill)(pid_t pid, int sig);
    pid_t (*getpid)(void);
    int (*gettimeofday)(struct timeval *tv, void *tz);
-   TickType_t (*xTaskGetTickCount)();
+   uint32_t (*get_time_ms)(void);
    int (*open)(const char *pathname, int flags, ...);
    int (*close)(int fd);
    int (*write)(int fd, const void *buf, size_t count);

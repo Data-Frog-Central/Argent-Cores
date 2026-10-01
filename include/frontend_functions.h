@@ -3,11 +3,9 @@
 
 #include <stdint.h>
 
-#if !defined(TickType_t)
-typedef uint32_t TickType_t;
-#endif
+void xlog(const char *fmt, ...);
+#define XLOG(format, ...) xlog("%s:%d:%s " format, __FILE__, __LINE__, __func__, ##__VA_ARGS__)
 
-extern int (*xlog)(const char *, ...);
-extern TickType_t xTaskGetTickCount(void);
+extern uint32_t get_time_ms(void);
 
 #endif

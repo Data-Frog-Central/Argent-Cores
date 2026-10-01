@@ -1,7 +1,7 @@
 #!/bin/bash
 read -r -d '' SF2000_BLOCK << 'EOF' || true
-# DartOS
-else ifeq ($(platform), dartos)
+# NocturnalRTOS
+else ifeq ($(platform), nocturnal)
 	TARGET := $(TARGET_NAME)_libretro_$(platform).a
 	MIPS:=/opt/mips32-mti-elf/2019.09-03-2/bin/mips-mti-elf-
 	CC = $(MIPS)gcc

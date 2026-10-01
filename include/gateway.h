@@ -1,13 +1,15 @@
-/*  Environment callback to be used by the dartos frontend.
+/*  
+    Environment callback to be used by NocturnalRTOS for SF2000.
     Might be ported to other frontends and backported to Multicore,
     Used for FrogUI in an attempt to remove hacky workarounds and conform with libretro better. 
 */
 
-/*TODO:     Implement a function to get fake rtc time
+/*
+    TODO:     Implement a function to get fake rtc time
 */
 
-#ifndef __DARTOS_H
-#define __DARTOS_H
+#ifndef __GATEWAY_H
+#define __GATEWAY_H
 
 #include <libretro.h>
 
@@ -64,4 +66,4 @@ RETRO_API unsigned retro_get_sram_number(void); // Number of sram slots
 RETRO_API void *retro_get_sram_data_ext(unsigned slot); // Get sram pointer from slot number
 RETRO_API size_t retro_get_sram_size_ext(unsigned slot); // Get sram size from slot number
 
-#endif //__DARTOS_H
+#endif //__GATEWAY_H

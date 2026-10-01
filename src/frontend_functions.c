@@ -11,13 +11,14 @@
 
 #include <libretro.h>
 #include <dirent.h>
-#include <frontend_functions.h>
 #include <core_api.h>
 
 #undef _malloc_r
 #undef _free_r
 #undef _calloc_r
 #undef _realloc_r
+
+extern int (*xlog)(const char *, ...);
 
 char* ram_buffer = NULL;
 size_t ram_buffer_size = 64 * 1024 * 1024;  // 64 MB
@@ -99,9 +100,9 @@ int gettimeofday(struct timeval *tv, void *tz) {
     return frontend_functions.gettimeofday(tv, tz);
 }
 
-//      FreeRTOS Functions      //
-TickType_t xTaskGetTickCount(void) {
-    return frontend_functions.xTaskGetTickCount();
+//      Time Functions      //
+uint32_t get_time_ms(void) {
+    return frontend_functions.get_time_ms();
 }
 
 //      I/O Operations      //
