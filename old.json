@@ -3,7 +3,7 @@
     "source": "https://github.com/madcock/libretro-2048",
     "branch": "52a7d45a96f33bbcdd3abca89873f9410bef69bb",
     "directory": "libretro-cores/libretro-2048/",
-    "output": "2048.hcrtos",
+    "output": "2048.mars",
     "make": {
       "file": "Makefile.libretro",
       "args": ""
@@ -18,7 +18,7 @@
     "source": "https://github.com/madcock/libretro-fceumm",
     "branch": "e6111e684e7a7761f3f1d6c80d0a825e2c8cdc7e",
     "directory": "libretro-cores/libretro-fceumm/",
-    "output": "FCEUmm.hcrtos",
+    "output": "FCEUmm.mars",
     "make": {
       "file": "Makefile",
       "args": ""
@@ -33,7 +33,7 @@
     "source": "https://github.com/madcock/libretro-gambatte",
     "branch": "e460f0d5dff7f2fc932cb6d0a6abd412829fd01e",
     "directory": "libretro-cores/libretro-gambatte/",
-    "output": "Gambatte.hcrtos",
+    "output": "Gambatte.mars",
     "make": {
       "file": "Makefile",
       "args": ""
@@ -48,7 +48,7 @@
     "source": "https://github.com/Data-Frog-Central/libretro-gambatte",
     "branch": "9e8bbe6a9a5e2cb35cfe3a851aaa631a4760f2e3",
     "directory": "libretro-cores/gambatte-prosty/",
-    "output": "Gambatte-P.hcrtos",
+    "output": "Gambatte-P.mars",
     "make": {
       "file": "Makefile",
       "args": ""
@@ -63,7 +63,7 @@
     "source": "https://github.com/madcock/Gearsystem",
     "branch": "f49ba241703092ec895e3fcf44802337f74cf73b",
     "directory": "libretro-cores/gearsystem/",
-    "output": "Gearsystem.hcrtos",
+    "output": "Gearsystem.mars",
     "make": {
       "file": "Makefile",
       "directory": "libretro-cores/gearsystem/platforms/libretro/",
@@ -79,7 +79,7 @@
     "source": "https://github.com/Data-Frog-Central/gpsp",
     "branch": "0b15ef1a41650bf41fa41427c833f7d518788805",
     "directory": "libretro-cores/gpsp/",
-    "output": "gpSP.hcrtos",
+    "output": "gpSP.mars",
     "make": {
       "file": "Makefile",
       "args": ""
@@ -94,7 +94,7 @@
     "source": "https://github.com/tzubertowski/gpsp_multicore",
     "branch": "3aefee929d29c1ce16d60d882859306cd65f970c",
     "directory": "libretro-cores/gpsp-c/",
-    "output": "gpSP-P.hcrtos",
+    "output": "gpSP-P.mars",
     "make": {
       "file": "Makefile",
       "args": ""
@@ -109,7 +109,7 @@
     "source": "https://github.com/Data-Frog-Central/gpsp-ff",
     "branch": "d29735993e1310af5c19cc3f6332c4cf7906c378",
     "directory": "libretro-cores/gpsp-ff/",
-    "output": "gpSP-PF.hcrtos",
+    "output": "gpSP-PF.mars",
     "make": {
       "file": "Makefile",
       "args": ""
@@ -126,7 +126,7 @@
     "source": "https://github.com/Data-Frog-Central/gpsp-ff",
     "branch": "d29735993e1310af5c19cc3f6332c4cf7906c378",
     "directory": "libretro-cores/gpsp-ff/",
-    "output": "gpSP-PFF.hcrtos",
+    "output": "gpSP-PFF.mars",
     "make": {
       "file": "Makefile",
       "args": "EXTRA_CFLAGS=\"-DSF2000_OPTIMIZATION_LEVEL=3\""
@@ -143,7 +143,7 @@
     "source": "https://github.com/madcock/libretro-beetle-pce-fast",
     "branch": "69903af9a7dcf5f0d3def162b8e59efacb3b4b4e",
     "directory": "libretro-cores/libretro-beetle-pce-fast/",
-    "output": "PCE-Fast.hcrtos",
+    "output": "PCE-Fast.mars",
     "make": {
       "file": "Makefile",
       "args": ""
@@ -158,7 +158,7 @@
     "source": "https://github.com/madcock/picodrive",
     "branch": "df621b6d86f6a5b481969263f05d7e7d6f507f8a",
     "directory": "libretro-cores/picodrive/",
-    "output": "PicoDrive.hcrtos",
+    "output": "PicoDrive.mars",
     "make": {
       "file": "Makefile.libretro",
       "args": ""
@@ -173,7 +173,7 @@
     "source": "https://github.com/madcock/QuickNES_Core",
     "branch": "ec86d78a6be9225f11ad92dbf551ac476e56b5e2",
     "directory": "libretro-cores/QuickNES/",
-    "output": "QuickNES.hcrtos",
+    "output": "QuickNES.mars",
     "make": {
       "file": "Makefile",
       "args": ""
@@ -188,7 +188,7 @@
     "source": "https://github.com/Data-Frog-Central/QuickNES_Core",
     "branch": "9a6852e768cbabfcaa884f2d69cd8ea8cea37b69",
     "directory": "libretro-cores/QuickNES-Prosty/",
-    "output": "QuickNES-P.hcrtos",
+    "output": "QuickNES-P.mars",
     "make": {
       "file": "Makefile",
       "args": ""
@@ -203,7 +203,7 @@
     "source": "https://github.com/madcock/snes9x2002",
     "branch": "67363bc20179d1f9415ffd43c229f28c572d93d2",
     "directory": "libretro-cores/snes9x2002/",
-    "output": "Snes9x 2002.hcrtos",
+    "output": "Snes9x 2002.mars",
     "make": {
       "file": "Makefile",
       "args": ""
@@ -218,7 +218,7 @@
     "source": "https://github.com/Data-Frog-Central/snes9x2002",
     "branch": "2535df6d4a724b6a48bcd767618c2978ea6fd9e7",
     "directory": "libretro-cores/snes9x2002-Prosty/",
-    "output": "Snes9x-P 2002.hcrtos",
+    "output": "Snes9x-P 2002.mars",
     "make": {
       "file": "Makefile",
       "args": ""
@@ -233,7 +233,7 @@
     "source": "https://github.com/madcock/snes9x2005",
     "branch": "fa69dd6a3caf279cc1f457e65e360f8b9a3683ed",
     "directory": "libretro-cores/snes9x2005/",
-    "output": "Snes9x 2005.hcrtos",
+    "output": "Snes9x 2005.mars",
     "make": {
       "file": "Makefile",
       "args": ""
@@ -248,7 +248,7 @@
     "source": "https://github.com/Data-Frog-Central/snes9x2005",
     "branch": "7603453ff51463011d259c15161c7e73e5c2b453",
     "directory": "libretro-cores/snes9x2005-Prosty/",
-    "output": "Snes9x-P 2005.hcrtos",
+    "output": "Snes9x-P 2005.mars",
     "make": {
       "file": "Makefile",
       "args": ""
@@ -263,7 +263,7 @@
     "source": "https://github.com/Data-Frog-Central/libretro-tgbdual",
     "branch": "066d9e9110777c3cbcc2f72a72ca64a588081400",
     "directory": "libretro-cores/libretro-tgbdual/",
-    "output": "TGB Dual.hcrtos",
+    "output": "TGB Dual.mars",
     "make": {
       "file": "Makefile",
       "args": ""
@@ -278,7 +278,7 @@
     "source": "https://github.com/Data-Frog-Central/SameBoy",
     "branch": "6f0c75b169b715233559bfd53df2ae700d0b4559",
     "directory": "libretro-cores/SameBoy/",
-    "output": "SameBoy.hcrtos",
+    "output": "SameBoy.mars",
     "make": {
       "file": "Makefile",
       "directory": "libretro-cores/SameBoy/libretro/",
@@ -296,7 +296,7 @@
     "source": "https://github.com/madcock/libretro-mame2000",
     "branch": "231929ab69e7538bc1d98f59634b8d7fee2ddde7",
     "directory": "libretro-cores/libretro-mame2000/",
-    "output": "M2k.hcrtos",
+    "output": "M2k.mars",
     "make": {
       "file": "Makefile",
       "args": ""
@@ -311,7 +311,7 @@
     "source": "https://github.com/Data-Frog-Central/libretro-mamenummacwaytausend",
     "branch": "b9d2a36f13ca86c6537ed9043ac4e7c097470a58",
     "directory": "libretro-cores/libretro-mamenummacwaytausend/",
-    "output": "M2k-N.hcrtos",
+    "output": "M2k-N.mars",
     "make": {
       "file": "Makefile",
       "args": ""

@@ -80,7 +80,6 @@ void *_realloc_r(struct _reent *r, void *ptr, size_t size) {
 }
 
 int	stat(const char *path, struct stat *sbuf) {
-    xlog("stat called\n");
     return frontend_functions.stat(path, sbuf);
 }
 

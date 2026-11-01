@@ -5,7 +5,7 @@
 *.a
 *.map
 *.elf
-*.hcrtos
+*.mars
 .env
 .local.mk
 .DS_Store

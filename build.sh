@@ -113,8 +113,8 @@ for CORE in $CORES; do
         done
     fi
     
-    if [ -n "core.hcrtos" ] && ([ -f "core.hcrtos" ] || [ -n "$(find . -name "core.hcrtos" -print -quit)" ]); then
-        diff -q "core.hcrtos" "output/$OUTPUT" || { rm -rf "output/$OUTPUT" && mkdir -p "$(dirname "output/$OUTPUT")" && cp "core.hcrtos" "output/$OUTPUT"; }
+    if [ -n "core.mars" ] && ([ -f "core.mars" ] || [ -n "$(find . -name "core.mars" -print -quit)" ]); then
+        diff -q "core.mars" "output/$OUTPUT" || { rm -rf "output/$OUTPUT" && mkdir -p "$(dirname "output/$OUTPUT")" && cp "core.mars" "output/$OUTPUT"; }
     fi
 
     if [ -n "$OUTPUT" ] && ([ -f "$OUTPUT" ] || [ -n "$(find . -name "$OUTPUT" -print -quit)" ]); then

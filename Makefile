@@ -1,7 +1,7 @@
 NPROC=$(shell nproc)
 SHELL:=/bin/bash
 
-MIPS=/opt/mips32-mti-elf/2019.09-03-2/bin/mips-mti-elf-
+MIPS=/opt/frog-toolchain/mipsel-mti-elf_stable/bin/mipsel-mti-elf-
 
 CC = $(MIPS)gcc
 CXX = $(MIPS)g++
@@ -26,7 +26,7 @@ SF2000_CXX_LDFLAGS += -Wl,--gc-sections --static
 SF2000_CXX_LDFLAGS += -z max-page-size=32
 
 # Default target
-all: core.hcrtos
+all: core.mars
 
 %.o: $(SRC_DIR)/%.cpp
 	$(CXX) $(SF2000_CFLAGS) -o $@ -c $<
@@ -56,13 +56,13 @@ core.elf: libretro_core.a libretro-common.a core_api.o frontend_functions.o
 	$(CXX) -Wl,-Map=$@.map $(SF2000_CXX_LDFLAGS) -e __core_entry__ -T$(SRC_DIR)/core.ld -o $@ \
 		-Wl,--start-group core_api.o frontend_functions.o libretro_core.a libretro-common.a -lc -Wl,--end-group
 
-core.hcrtos: core.elf
+core.mars: core.elf
 	$(OBJCOPY) -O binary -R .MIPS.abiflags -R .note.gnu.build-id -R ".rel*" core.elf "$@"
 
 # Clean intermediate files and the final executable
 clean:
 	-rm -f core_api.o frontend_functions.o
-	-rm -f core.elf core.elf.map core.hcrtos
+	-rm -f core.elf core.elf.map core.mars
 	-rm -f libretro_core.a libretro-common.a
 	@if [ -n "$(CORE)" ]; then \
 		$(MAKE) -j$(NPROC) -C libretro-common clean; \

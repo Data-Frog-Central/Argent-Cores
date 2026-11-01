@@ -3,7 +3,7 @@
     "source": "https://github.com/libretro/libretro-2048",
     "branch": "c90437d3c3913999624deca3fb55ecfa632b72c4",
     "directory": "libretro-cores/libretro-2048",
-    "output": "2048.hcrtos",
+    "output": "2048.mars",
     "make": {
       "file": "Makefile.libretro",
       "args": ""
@@ -20,7 +20,7 @@
     "source": "https://github.com/Data-Frog-Central/FrogUI",
     "branch": "2be3905aeee73b22ac3dda9c4dc8c4e1870d340f",
     "directory": "libretro-cores/FrogUI",
-    "output": "frogui.hcrtos",
+    "output": "frogui.mars",
     "make": {
       "file": "Makefile",
       "args": ""
@@ -35,7 +35,7 @@
     "source": "https://github.com/libretro/gpsp",
     "branch": "2db57b11a437c4432ab69823bdcd951181de6213",
     "directory": "libretro-cores/gpsp",
-    "output": "gpsp.hcrtos",
+    "output": "gpsp.mars",
     "make": {
       "file": "Makefile",
       "args": ""
