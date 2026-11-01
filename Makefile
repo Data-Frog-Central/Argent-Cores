@@ -3,6 +3,22 @@ SHELL:=/bin/bash
 
 MIPS=/opt/frog-toolchain/mipsel-mti-elf_stable/bin/mipsel-mti-elf-
 
+# Core types
+# LIBRETRO = 0x0001
+
+# !! Not implemented yet !!
+# SDL1.2   = 0x0002
+
+CORE_VER_MAJOR      ?= 1
+CORE_VER_MINOR      ?= 0
+CORE_TYPE  			?= 0x0001
+
+# Core flags
+LOAD_ADDRESS = 0x87000000
+CORE_FLAGS = -DCORE_VER_MAJOR=$(CORE_VER_MAJOR) \
+             -DCORE_VER_MINOR=$(CORE_VER_MINOR) \
+             -DCORE_TYPE=$(CORE_TYPE)
+
 CC = $(MIPS)gcc
 CXX = $(MIPS)g++
 LD = $(MIPS)ld
@@ -15,6 +31,7 @@ SF2000_CFLAGS := -EL -march=mips32 -mtune=mips32 -msoft-float
 SF2000_CFLAGS += -O3 -G0 -fno-pic
 SF2000_CFLAGS += -ffunction-sections -fdata-sections
 SF2000_CFLAGS += -I $(INCLUDE_DIR) -I libretro-common/include
+SF2000_CFLAGS += $(CORE_FLAGS)
 
 LDFLAGS := -EL -nostdlib -z max-page-size=32
 LDFLAGS += --gc-sections
@@ -53,7 +70,7 @@ libretro-common.a: libretro-common
 
 core.elf: libretro_core.a libretro-common.a core_api.o frontend_functions.o
 	@$(call echo_i,"compiling $@")
-	$(CXX) -Wl,-Map=$@.map $(SF2000_CXX_LDFLAGS) -e __core_entry__ -T$(SRC_DIR)/core.ld -o $@ \
+	$(CXX) -Wl,-Map=$@.map $(SF2000_CXX_LDFLAGS) -Wl,--defsym,_load_address=$(LOAD_ADDRESS) -e __core_entry__ -T$(SRC_DIR)/core.ld -o $@ \
 		-Wl,--start-group core_api.o frontend_functions.o libretro_core.a libretro-common.a -lc -Wl,--end-group
 
 core.mars: core.elf

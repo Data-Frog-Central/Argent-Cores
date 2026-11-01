@@ -1,5 +1,11 @@
 SECTIONS {
-	. = 0x87000000;
+	. = _load_address;
+
+	.mars_header :
+    {
+        KEEP(*(.mars_header))
+    }
+
 	.init           :
 	{
 		*(.init.core_entry)
